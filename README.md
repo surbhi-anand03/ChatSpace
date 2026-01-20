@@ -1,8 +1,19 @@
 # 💬 ChatSpace
-A simple web-based chat application for sending and viewing messages.
+A simple web-based chat application for Creating, Updation, Deletion and viewing messages.
 
 **ChatSpace** is a lightweight, full-stack project built with **Node.js, Express, MongoDB, and EJS**.  
 It demonstrates basic CRUD operations for messages and a responsive UI with dark/light mode toggle.
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Deployed Application:**
+([https://prescriptoo-frontend-k4dk.onrender.com/](https://chatspace-rc67.onrender.com/chats))
+
+📱 **QR Code – Scan to view Project:**
+
+![ChatSPace QR Code](ChatSPace_Scanner.jpeg)
 
 ---
 
@@ -45,10 +56,7 @@ npm install
 # Start the server
 node app.js
 
-
-## Open Web at:
-https://chatspace-rc67.onrender.com/chats
-
+---
 
 ##📌 Notes
 
@@ -57,15 +65,3 @@ This project does not include user authentication.
 All messages are stored in MongoDB.
 
 The app uses server-side rendering with EJS templates.
-
-##📈 Future Enhancements
-
-Add user registration & login
-
-Real-time messaging with Socket.IO
-
-File or image sharing in chats
-
-RESTful APIs for frontend-backend separation
-
-Mobile-first improvements and enhanced styling
