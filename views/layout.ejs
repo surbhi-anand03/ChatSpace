@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatSpace</title>
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="top-bar">
+    <div class="app-header">
+      <h2>ChatSpace</h2>
+      <button id="themeToggle">Dark Mode</button>
+    </div>
+
+    <div class="new-chat-container">
+      <form method="GET" action="/chats/new">
+        <button>New Chat</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- ================= SCRIPT ================= -->
+  <script>
+    const toggle = document.getElementById("themeToggle");
+
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggle.textContent = "Light Mode";
+    }
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggle.textContent = "Light Mode";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggle.textContent = "Dark Mode";
+      }
+    });
+  </script>
+
+</body>
+</html>

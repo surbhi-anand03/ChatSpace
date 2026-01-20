@@ -1,0 +1,13 @@
+<h3>Edit your Chat</h3>
+
+<p>From: <b><%= chat.from %></b></p>
+<p>To: <b><%= chat.to %></b></p>
+
+<form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
+    <textarea name="msg"><%= chat.msg %></textarea>
+    <br><br>
+    <button>Edit</button>
+</form>
+
+<br>
+<a href="/chats">⬅ Back to all chats</a>

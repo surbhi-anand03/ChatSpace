@@ -1,0 +1,19 @@
+<h3>Chat Details</h3>
+
+<div class="chat">
+    <p><i>From:</i> <b><%= chat.from %></b></p>
+
+    <div class="msg received">
+        <p><%= chat.msg %></p>
+    </div>
+
+    <p><i>To:</i> <b><%= chat.to %></b></p>
+
+    <hr>
+
+    <p><b>Time:</b> <%= chat.created_at.toString().split(" ")[4] %></p>
+    <p><b>Date:</b> <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %></p>
+</div>
+
+<br>
+<a href="/chats">⬅ Back to all chats</a>

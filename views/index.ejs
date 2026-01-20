@@ -1,0 +1,60 @@
+<%
+    let lastDate = "";
+    const today = new Date().toDateString();
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+%>
+
+<% for (let chat of chats) { %>
+
+    <%
+        const chatDate = new Date(chat.created_at).toDateString();
+        let label = "";
+
+        if (chatDate !== lastDate) {
+            if (chatDate === today) label = "Today";
+            else if (chatDate === yesterday) label = "Yesterday";
+            else label = chatDate;
+
+            lastDate = chatDate;
+    %>
+
+        <div class="date-separator"><%= label %></div>
+
+    <% } %>
+
+    <div class="chat-row <%= chat.from === 'Surbhi' ? 'sent-row' : 'received-row' %>">
+
+        <div class="avatar">
+            <%= chat.from[0].toUpperCase() %>
+        </div>
+
+        <div class="msg <%= chat.from === 'Surbhi' ? 'sent' : 'received' %>">
+
+            <div class="msg-header">
+                <span class="msg-name"><%= chat.from %></span>
+            </div>
+
+            <p class="msg-text"><%= chat.msg %></p>
+
+            <div class="actions">
+                <form method="GET" action="/chats/<%= chat._id %>/edit">
+                    <button>Edit</button>
+                </form>
+
+                <form method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                    <button>Delete</button>
+                </form>
+
+                <form method="GET" action="/chats/<%= chat._id %>">
+                    <button>Show</button>
+                </form>
+            </div>
+            <div class="msg-footer"> <br>
+                <%= chat.created_at.toString().split(" ")[4] %> •
+                <%= chat.created_at.toString().split(" ").slice(0,4).join(" ") %>
+            </div>
+
+        </div>
+    </div>
+
+<% } %>
