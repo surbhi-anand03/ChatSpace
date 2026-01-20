@@ -13,7 +13,7 @@ It demonstrates basic CRUD operations for messages and a responsive UI with dark
 
 📱 **QR Code – Scan to view Project:**
 
-![ChatSPace QR Code](ChatSPace_Scanner.jpeg)
+(ChatSpace_Scanner.jpeg)
 
 ---
 
