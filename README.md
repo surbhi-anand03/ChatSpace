@@ -9,7 +9,7 @@ It demonstrates basic CRUD operations for messages and a responsive UI with dark
 ## 🚀 Live Demo
 
 🔗 **Deployed Application:**
-([https://prescriptoo-frontend-k4dk.onrender.com/](https://chatspace-rc67.onrender.com/chats))
+([(https://chatspace-rc67.onrender.com/chats)](https://chatspace-rc67.onrender.com/chats))
 
 
 ---
