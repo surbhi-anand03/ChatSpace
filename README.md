@@ -11,9 +11,6 @@ It demonstrates basic CRUD operations for messages and a responsive UI with dark
 🔗 **Deployed Application:**
 ([https://prescriptoo-frontend-k4dk.onrender.com/](https://chatspace-rc67.onrender.com/chats))
 
-📱 **QR Code – Scan to view Project:**
-
-(ChatSpace_Scanner.jpeg)
 
 ---
 
